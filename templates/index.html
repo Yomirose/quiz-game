@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Game</title>
+</head>
+<body>
+    <h1>Welcome to the quiz Game!</h1>
+
+    <p>Question {{ question_number }}: {{ question.text }}</p>
+
+    <form method="POST">
+        <input type="radio" id="true" name="answer" value="True" required>
+        <label for="true">True</label><br>
+        <input type="radio" id="false" name="answer" value="False">
+        <label for="false">False</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Score: {{ score }}</p>
+
+    {% if feedback %}
+        <p>{{ feedback }}</p>
+    {% endif %}
+</body>
+</html>
