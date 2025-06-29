@@ -5,34 +5,65 @@
     <title>Quiz Game</title>
 
     <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+        background-color: #b8f5d1;
+    }
+
+    h1, p, label {
+        font-weight: bold;
+    }
+
+    .radio-option {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 20px;
+        font-size: 16px;
+    }
+
+    .radio-option input {
+        margin-right: 5px;
+    }
+
+    input[type="submit"] {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        height: 35px;
+        width: 90px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 8px; /* fixed from border-radio */
+        border: none;
+    }
+
+    /* ✅ Make content more bold and readable on small screens */
+    @media (max-width: 600px) {
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 100px;
-            background-color: #97f0af;
+            padding-top: 50px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p, label {
+            font-size: 18px;
         }
 
         .radio-option {
-            display: inline-flex;
-            align-items: center;
-            margin-right: 20px;
-            font-size: 16px;
-        }
-
-        .radio-option input {
-            margin-right: 5px;
+            font-size: 18px;
         }
 
         input[type="submit"] {
-            cursor: pointer;
-            background-color: black;
-            border-radio: 30px;
-            color: white;
-            height: 30px;
-            width: 70px
+            font-size: 18px;
+            height: 40px;
+            width: 100px;
         }
-
-    </style>
+    }
+</style>
 
 </head>
 <body>
