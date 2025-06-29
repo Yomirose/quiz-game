@@ -3,20 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Quiz Game</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            background-color: #97f0af;
+        }
+
+        .radio-option {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 20px;
+            font-size: 16px;
+        }
+
+        .radio-option input {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: black;
+            border-radio: 30px;
+            color: white;
+            height: 30px;
+            width: 70px
+        }
+
+    </style>
+
 </head>
 <body>
     <h1>Welcome to the quiz Game!</h1>
 
     <p>Question {{ question_number }}: {{ question.text }}</p>
 
-    <form method="POST">
-        <input type="radio" id="true" name="answer" value="True" required>
-        <label for="true">True</label><br>
-        <input type="radio" id="false" name="answer" value="False">
-        <label for="false">False</label><br><br>
+<!--    <form method="POST">-->
+<!--        <input type="radio" id="true" name="answer" value="True" required>-->
+<!--        <label for="true">True</label><br>-->
+<!--        <input type="radio" id="false" name="answer" value="False">-->
+<!--        <label for="false">False</label><br><br>-->
 
-        <input type="submit" value="Submit">
-    </form>
+<!--        <input type="submit" value="Submit">-->
+<!--    </form>-->
+
+    <form method="POST">
+    <div class="radio-option">
+        <input type="radio" id="true" name="answer" value="True" required>
+        <label for="true">True</label>
+    </div>
+
+    <div class="radio-option">
+        <input type="radio" id="false" name="answer" value="False">
+        <label for="false">False</label>
+    </div>
+
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
 
     <p>Score: {{ score }}</p>
 
