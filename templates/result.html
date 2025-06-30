@@ -14,9 +14,11 @@
         }
 
         a {
+            display: block;
             font-size: 18px;
             text-decoration: none;
             color: blue;
+            margin: 10px 0;
         }
 
         a:hover {
@@ -41,5 +43,6 @@
     <h1>Quiz Completed!</h1>
     <p>Your score: {{ score }} / {{ total }}</p>
     <a href="/reset">Try again</a>
+    <a href="/quit">Quit</a>
 </body>
 </html>

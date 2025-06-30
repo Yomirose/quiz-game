@@ -58,6 +58,11 @@ def reset():
     feedback_message = None
     return redirect(url_for("index"))
 
+@app.route("/quit")
+def quit_game():
+    return render_template("thankyou.html")
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
