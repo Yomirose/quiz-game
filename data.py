@@ -1,71 +1,67 @@
 question_data = [
-    {
-        "type": "boolean", "difficulty": "easy",
-        "category": "Science: Computers",
-        "question": "The logo for Snapchat is a Bell.",
-        "correct_answer": "False",
-        "incorrect_answers": ["True"]
-    },
-    {
-        "type": "boolean", "difficulty": "easy",
-        "category": "Science: Computers",
-        "question": "Time on Computers is measured via the EPOX System.",
-        "correct_answer": "False",
-        "incorrect_answers": ["True"]
-    },
-    {
-        "type": "boolean", "difficulty": "easy",
-        "category": "Science: Computers",
-        "question": "Ada Lovelace is often considered the first computer programmer.",
-        "correct_answer": "True",
-        "incorrect_answers": ["False"]
-    },
-    {
-        "type": "boolean", "difficulty": "easy",
-        "category": "Science: Computers",
-        "question": "The NVidia GTX 1080 gets its name because it can only render at a 1920x1080 screen resolution.",
-        "correct_answer": "False",
-        "incorrect_answers": ["True"]
-    },
-    {
-        "type": "boolean", "difficulty": "easy",
-        "category": "Science: Computers",
-        "question": "Linus Torvalds created Linux and Git.",
-        "correct_answer": "True",
-        "incorrect_answers": ["False"]
-    },
-    {
-        "type": "boolean", "difficulty": "easy",
-        "category": "Science: Computers",
-        "question": "JavaScript derives from a later version of Java",
-        "correct_answer": "False",
-        "incorrect_answers": ["True"]
-    },
-    {
-        "type": "boolean", "difficulty": "easy",
-        "category": "Science: Computers",
-        "question": "The first IBM PC was released in 1981.",
-        "correct_answer": "True",
-        "incorrect_answers": ["False"]
-    },
-    {
-        "type": "boolean", "difficulty": "easy",
-        "category": "Science: Computers",
-        "question": "In most programming languages, the operator ++ is equivalent to the statement &quot;+= 1&quot;.",
-        "correct_answer": "True",
-        "incorrect_answers": ["False"]
-    },
-    {
-        "type": "boolean", "difficulty": "easy",
-        "category": "Science: Computers",
-        "question": "Linux was first created as an alternative to Windows XP.",
-        "correct_answer": "False",
-        "incorrect_answers": ["True"]
-    },
-    {
-        "type": "boolean", "difficulty": "easy",
-        "category": "Science: Computers",
-        "question": "The Python programming language gets its name from the British comedy group &quot;Monty Python.&quot;",
-        "correct_answer": "True", "incorrect_answers": ["False"]
-    }
+    {"type": "boolean",
+     "difficulty": "easy",
+     "category": "Entertainment: Music",
+     "question": "American rapper Dr. Dre actually has a Ph.D. doctorate.",
+     "correct_answer": "False",
+     "incorrect_answers": ["True"]
+     },
+    {"type": "boolean",
+     "difficulty": "easy",
+     "category": "Entertainment: Music",
+     "question": "In 1993, Prince changed his name to an unpronounceable symbol because he was unhappy with his contract with Warner Bros.",
+     "correct_answer": "True",
+     "incorrect_answers": ["False"]
+     },
+    {"type": "boolean",
+     "difficulty": "easy",
+     "category": "Entertainment: Music",
+     "question": "Stevie Wonder's real name is Stevland Hardaway Morris.", "correct_answer": "True",
+     "incorrect_answers": ["False"]
+     },
+    {"type": "boolean",
+     "difficulty": "easy",
+     "category": "Entertainment: Music",
+     "question": "The alternative rock band, They Might Be Giants, released their album 'Flood' in 1990. ",
+     "correct_answer": "True",
+     "incorrect_answers": ["False"]
+     },
+    {"type": "boolean", "difficulty": "easy",
+     "category": "Entertainment: Music",
+     "question": "A Saxophone is a brass instrument.",
+     "correct_answer": "False",
+     "incorrect_answers": ["True"]
+     },
+    {"type": "boolean", "difficulty": "easy",
+     "category": "Entertainment: Music",
+     "question": "The song \"Stronger Than You\" is a single by Estelle, who played Garnet in Steven Universe.",
+     "correct_answer": "True",
+     "incorrect_answers": ["False"]
+     },
+    {"type": "boolean",
+     "difficulty": "easy",
+     "category": "Entertainment: Music",
+     "question": "Lead Singer Rivers Cuomo of American rock band Weezer attended Harvard.",
+     "correct_answer": "True",
+     "incorrect_answers": ["False"]
+     },
+    {"type": "boolean", "difficulty": "easy",
+     "category": "Entertainment: Music",
+     "question": "Eurobeat is primarily an Italian genre of music.",
+     "correct_answer": "True",
+     "incorrect_answers": ["False"]
+     },
+    {"type": "boolean",
+     "difficulty": "easy",
+     "category": "Entertainment: Music",
+     "question": "The 2011 movie \"The Adventures of Tintin\" was directed by Steven Spielberg.",
+     "correct_answer": "True",
+     "incorrect_answers": ["False"]
+     },
+    {"type": "boolean",
+     "difficulty": "easy",
+     "category": "Entertainment: Music",
+     "question": "Scatman John's real name was John Paul Larkin.", "correct_answer": "True",
+     "incorrect_answers": ["False"]
+     }
 ]
