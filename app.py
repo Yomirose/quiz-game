@@ -9,7 +9,7 @@ app = Flask(__name__)
 question_bank = [Question(q["question"], q["correct_answer"]) for q in question_data]
 quiz = QuizBrain(question_bank)
 
-feedback_message = None  # To store feedback between requests
+feedback_message = None
 
 
 @app.route("/", methods=["GET", "POST"])
@@ -26,23 +26,22 @@ def index():
             feedback_message = f"Wrong! The correct answer was: {correct_answer}"
 
         if quiz.still_has_questions():
+            quiz.next_question()
             return redirect(url_for("index"))
         else:
             return redirect(url_for("result"))
 
-    # Get next question
-    current_question = quiz.next_question()
-    if current_question:
-        return render_template(
-            "index.html",
-            question=current_question,
-            question_number=quiz.question_number,
-            score=quiz.score,
-            feedback=feedback_message
-        )
-    else:
-        return redirect(url_for("result"))
+    # GET request — do NOT call next_question here
+    if quiz.current_question is None:
+        quiz.next_question()
 
+    return render_template(
+        "index.html",
+        question=quiz.current_question,
+        question_number=quiz.question_number,
+        score=quiz.score,
+        feedback=feedback_message
+    )
 
 @app.route("/result")
 def result():
