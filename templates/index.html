@@ -6,101 +6,100 @@
     <title>Quiz Game</title>
 
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding-top: 100px;
-        background-color: #b8f5d1;
-        margin: 0;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            background-color: #b8f5d1;
+            margin: 0;
+        }
 
-    h1, p, label {
-        font-weight: bold;
-    }
+        h1, p, label {
+            font-weight: bold;
+        }
 
-    h2 {
+        h2 {
             font-size: 24px;
             color: red;
         }
 
-    .radio-option {
-        display: inline-flex;
-        align-items: center;
-        margin-right: 20px;
-        font-size: 16px;
-    }
-
-    .radio-option input {
-        margin-right: 5px;
-    }
-
-    input[type="submit"] {
-        cursor: pointer;
-        background-color: black;
-        color: white;
-        height: 35px;
-        width: 90px;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 8px;
-        border: none;
-        margin-top: 10px;
-    }
-
-    @media screen and (max-width: 600px) {
-        body {
-            padding-top: 70px;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
-        h1 {
-            font-size: 30px;
-        }
-
-        p {
-            font-size: 20px;
-        }
-
-        label {
-            font-size: 20px;
-        }
-
         .radio-option {
-            font-size: 20px;
-            margin-bottom: 10px;
+            display: inline-flex;
+            align-items: center;
+            margin: 5px 20px;
+            font-size: 16px;
+        }
+
+        .radio-option input {
+            margin-right: 5px;
         }
 
         input[type="submit"] {
-            width: 40%;
-            height: 45px;
-            font-size: 20px;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            height: 35px;
+            width: 90px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            border: none;
+            margin-top: 10px;
         }
-    }
-</style>
 
+        @media screen and (max-width: 600px) {
+            body {
+                padding-top: 70px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            label {
+                font-size: 20px;
+            }
+
+            .radio-option {
+                font-size: 20px;
+                margin-bottom: 10px;
+                display: block;
+                margin-right: 0;
+            }
+
+            input[type="submit"] {
+                width: 40%;
+                height: 45px;
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the quiz Game!</h1>
-    <h2>Category: Music</h2>
+    <h1>Welcome to the Quiz Game!</h1>
+    <h2>Category: Mathematics</h2>
 
-    <p>Question {{ question_number }}: {{ question.text }}</p>
-
+    <p>Question {{ question_number }}:</p>
     <form method="POST">
-    <div class="radio-option">
-        <input type="radio" id="true" name="answer" value="True" required>
-        <label for="true">True</label>
-    </div>
 
-    <div class="radio-option">
-        <input type="radio" id="false" name="answer" value="False">
-        <label for="false">False</label>
-    </div>
+        <p>{{ question|safe }}</p>
 
-    <br><br>
-    <input type="submit" value="Submit">
-</form>
+        {% for option in options %}
+            <div class="radio-option">
+                <input type="radio" name="answer" value="{{ option }}" id="{{ option }}" required>
+                <label for="{{ option }}">{{ option|safe }}</label>
+            </div>
+        {% endfor %}
 
+        <br>
+        <input type="submit" value="Submit">
+    </form>
 
     <p>Score: {{ score }}</p>
 

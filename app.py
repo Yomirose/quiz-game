@@ -6,7 +6,7 @@ from question_model import Question
 app = Flask(__name__)
 
 # Initialize quiz and question bank
-question_bank = [Question(q["question"], q["correct_answer"]) for q in question_data]
+question_bank = [Question(q["question"], q["correct_answer"], q["incorrect_answers"]) for q in question_data]
 quiz = QuizBrain(question_bank)
 
 feedback_message = None  # To store feedback between requests
@@ -35,7 +35,8 @@ def index():
     if current_question:
         return render_template(
             "index.html",
-            question=current_question,
+            question=current_question.text,
+            options=current_question.options,
             question_number=quiz.question_number,
             score=quiz.score,
             feedback=feedback_message
@@ -53,7 +54,7 @@ def result():
 def reset():
     global quiz, feedback_message
     # Reinitialize everything
-    question_box = [Question(q["question"], q["correct_answer"]) for q in question_data]
+    question_box = [Question(q["question"], q["correct_answer"], q["incorrect_answers"]) for q in question_data]
     quiz = QuizBrain(question_box)
     feedback_message = None
     return redirect(url_for("index"))

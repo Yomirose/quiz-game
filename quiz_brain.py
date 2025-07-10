@@ -1,3 +1,4 @@
+# This run in the browser
 class QuizBrain:
     def __init__(self, question_list):
         self.question_number = 0
@@ -23,6 +24,8 @@ class QuizBrain:
         return self.question_number < len(self.question_list)
 
 
+
+# This code runs in the terminal
 
 # class QuizBrain:
 #
